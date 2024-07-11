@@ -1,0 +1,79 @@
+---
+title: "LS 빅데이터 스쿨 3일차"
+author: "송현주"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+### 파이썬 코드 청크
+* 단축키: `ctrl + Alt + I`
+
+### 코드 청크 종류
+2가지
+
+1. 인라인 코드청크 : `하나로 묶음
+2. 디스플레이 코드 청크 : ` 세개로 묶음
+
+
+
+```{python}
+1 + 1
+```
+
+## 코드 청크 실행 옵션
+
+* `echo` 옵션 : 코드를 문서에 보여줌
+* `eval` 옵션 : 코드를 실행할 것인가 그냥 둘 것인가 결정
+
+```{python}
+#| echo: fenced
+#| eval: false
+2 * 2
+```
+
+
+
+---
+이것은 간단한 각주[^1]입니다.이것은 간단한 각주[^2]입니다.이것은 간단한 각주[^3]입니다.이것은 간단한 각주[^4]입니다.
+
+[^1]: 이것은 참조된 텍스트입니다.
+
+[^2]: 이것은 참조된 텍스트입니다.
+
+[^3]: 이것은 참조된 텍스트입니다.
+
+[^4]: 이것은 참조된 텍스트입니다.
+
+
+**굵게**
+*이탤릭*
+~취소선~
+
+```
+ print('Hi')
+```
+
+
+- [x] 화분 물 주기
+- [ ] 운동하기
+
+[슬기로운 통계생활](https://statisticsplaybook.com/)
+
+![위키피디아 흑요석|100x100](./img/img1.png)
+
+* 인라인 수식: $ 하나로 감싸준다. (본문에 입력)
+* 디스플레이 수식: $ 두개로 감싸준다. (독립적인 문단)
+
+문장 안에 숫자 $5^2$를 넣어 보자.
+$$
+x^2 + y^2 = 5\sqrt{2}
+$$
