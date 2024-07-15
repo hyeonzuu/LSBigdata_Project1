@@ -25,3 +25,6 @@ plt.show()
 from sklearn import metrics 
 metrics.accuracy_score()
 
+a = [1, 2, 3]
+a[1] = 4
+a
