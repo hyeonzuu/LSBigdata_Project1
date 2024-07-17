@@ -17,7 +17,7 @@ df.query('english < 90  |  science < 50')
 df.query('nclass == 1  |  nclass == 3 | nclass == 5')
 df.query('nclass in [1, 3, 5]')
 df.query('nclass not in [1, 3, 5]') # not in 가능
-df[~df["nclass"]]
+
 
 # df[] 변수 추출
 df['math']
@@ -42,7 +42,8 @@ df = df.assign(
     total = df['math'] + df['english'] + df['science'],
     mean = (df['math'] + df['english'] + df['science']) / 3
     ).sort_values("total", ascending=False)
-    
+df.head()
+
 # 람다 이용 ???
 df = df.assign(
     total = lamda x: x['math'] + x['english'] + x['science'],
