@@ -20,10 +20,12 @@ df.dropna()
 # 데이터 프레임 location을 통한 인덱싱 ???
 exam.loc[행인덱스, 열 인덱스 ]
 exam.loc[[2, 7, 14], ]
+exam.loc[:3]
+exam.iloc[:3]
 exam.iloc[0,0]
 exam.loc[[0],['id', 'nclass']]
-exam.loc[[2,7,4], ['math']] = np.nan
-exam.loc[[2,7,4], 2] = np.nan
+exam.iloc[[2,7,4], 3] = np.nan
+exam.loc[[2,7,4], ["math"]] = np.nan
 exam
 
 # 수학점수가 50점 이하인 학생 점수 50으로 상향조정
