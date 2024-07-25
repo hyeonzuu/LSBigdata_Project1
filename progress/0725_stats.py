@@ -14,7 +14,7 @@ binom.pmf(1, n=2,p = 0.3)
 binom.pmf(2, n=2,p = 0.3)
 
 # X ~ B(n, p)
-binom.pmf(np.arange(31), n = 30, p = 0.3)
+binom.pmf(np.arange(30), n = 30, p = 0.3)
 
 math.factorial(54) / math.factorial(26) * math.factorial(28)
 math.comb(54, 26)
