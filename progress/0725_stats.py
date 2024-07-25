@@ -5,10 +5,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import math
 
-binom.pmf(1, 0.3)
-binom.pmf(0, 0.3)
-
-
 # 이항 분포 X ~ P(X = k \ n, p)
 # n : 베르누이 확률변수 
 # p : 1이 나올 확률
@@ -160,7 +156,7 @@ plt.plot(k, y, color='black')
 plt.show()
 plt.clf()
 
-# mu (loc) : 종분포의 중심 결정하는 모수
+# mu (loc) : 종분포의 중심 결정하는 모수(모수:특징을 결정하는 수)
 k =np.linspace(-3, 3, 100)
 y = norm.pdf(k, loc=0, scale=1)
 
@@ -172,11 +168,56 @@ plt.clf()
 k =np.linspace(-5, 5, 100)
 y = norm.pdf(k, loc=0, scale=1)
 y2 = norm.pdf(k, loc=0, scale=2)
-plt.plot(k, y, color='black')
+y3 = norm.pdf(k, loc=0, scale=0.5)
 
+plt.plot(k, y, color='black')
+plt.plot(k, y2, color='red')
+plt.plot(k, y3, color='blue')
 
 plt.show()
 plt.clf()
+
+norm.cdf(0, loc=0, scale=1)
+norm.cdf(100, loc=0, scale=1)
+
+# P(-2 < x < 0.54)
+norm.cdf(0.54, loc=0, scale=1) - norm.cdf(-2, loc=0, scale=1)
+
+# P(1< x | x > 3)
+norm.cdf(1, loc=0, scale=1) + norm.cdf(-3, loc=0, scale=1)
+
+# X ~ N(3, 5^2)
+# P(3 < X < 5) = 15.54%
+norm.cdf(5, loc=3, scale=5) - norm.cdf(3, loc=3, scale=5)
+
+# 위 확률변수에서 표본 1000개 뽑아보자
+x = norm.rvs(loc=3, scale=5, size=1000)
+sum((x > 3) & (x < 5)) /1000
+
+# 평균 : 0, 표준편차 : 1
+# 표본 1000개 뽑아서 0보다 작은 비율 확인
+x = norm.rvs(loc=0, scale=1, size=1000)
+sum((x < 0) /1000
+np.mean(x < 0)
+
+x = norm.rvs(loc = 3, scale = 2, size = 1000)
+sns.histplot(x, stat = 'density') # 120 : 0.2 축소
+
+xmin, xmax = (x.min(), x.max())
+x_values = np.linspace(xmin, xmax, 100)
+pdf_values = norm.pdf(x_values, loc = 3, scale = 2)
+plt.plot(x_values, pdf_values, color = 'red')
+plt.show()
+plt.clf()
+
+
+
+
+
+
+
+
+
 
 
 
