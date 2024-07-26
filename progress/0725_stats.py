@@ -1,4 +1,5 @@
 from scipy.stats import binom
+from scipy.stats import bernoulli
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
