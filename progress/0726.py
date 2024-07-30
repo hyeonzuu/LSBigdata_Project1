@@ -76,7 +76,7 @@ plt.clf()
 
 # 95%에 해당하는 a,b값
 4 - norm.ppf(0.025, loc = 4, scale=np.sqrt(1.3333/20)) # 중심에서 0.505 떨어지면 됨
-4 - norm.ppf(0.975, loc = 4, scale=np.sqrt(1.3333/20))
+4 - norm.ppf(0.975, loc = 4, scale=np.sqrt(1.3333/20)) # 중심값 = 4
 # 99%에 해당하는 a,b값
 4 - norm.ppf(0.005, loc = 4, scale=np.sqrt(1.3333/20))# 중심에서 0.665 떨어지면 됨
 4 - norm.ppf(0.995, loc = 4, scale=np.sqrt(1.3333/20))
