@@ -10,12 +10,14 @@ len(geo_seoul)
 
 geo_seoul.keys()
 geo_seoul["features"][0]
+
 len(geo_seoul["features"])
 type(geo_seoul["features"]) 
 geo_seoul["features"][0].keys()
 geo_seoul["features"][0]["properties"]
 geo_seoul["features"][0]["geometry"]
 coordinates_list =  geo_seoul["features"][0]["geometry"]["coordinates"]
+
 len(coordinates_list) # 1 , 대괄호 4개
 len(coordinates_list[0])  # 1, 대괄호 3개
 len(coordinates_list[0][0]) # 2332개, 이제 df로 만들기
@@ -190,8 +192,10 @@ def make_seouldf(num):
     return pd.DataFrame({"gu_name":gu_name, "x": x, "y": y})
 
 make_seouldf(1)
+
 # 데이터프레임에 넣기
 result=pd.DataFrame({})
+
 for i in range(25):
     result=pd.concat([result, draw_seoul(i)], ignore_index=True)    
 
